@@ -515,7 +515,7 @@ form:not([class="button_to"]) {
   div.field_with_errors {
     display: inline;
     label {
-      color: $error-color;
+      color: rgb(255, 0, 0);
     }
     input,
     textarea,
