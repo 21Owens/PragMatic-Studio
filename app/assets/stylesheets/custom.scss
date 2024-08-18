@@ -532,13 +532,16 @@ form:not([class="button_to"]) {
   text-align: center;
   margin-top: -1rem;
   margin-bottom: 2rem;
+  background-color: rgb(243, 4, 4);
 
   &.notice {
     @extend .alert-success;
+    background-color: #237cbe
   }
 
   &.alert {
     @extend .alert-danger;
+    background-color: #393939;
   }
 }
 
