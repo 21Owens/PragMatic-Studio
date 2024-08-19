@@ -8,7 +8,7 @@ class Movie < ApplicationRecord
 
   validates :image_file_name, format: {
     with: /\w+\.(jpg|png)\z/i,
-    message: "must be a JPG or PNG image"
+    message: "must be a JPG or PNG image!"
   }
 
   RATINGS = %w(G PG PG-13 R NC-17)
