@@ -306,4 +306,9 @@ Review.create!([
     comment: 'A great movie that’s fun from start to finish.',
     movie_id: 10
   }
+  {name: 'Peyton Owens',
+  stars: 3,
+  comment: 'A great movie that’s fun from start to finish.',
+  movie_id: 10
+}
 ])
