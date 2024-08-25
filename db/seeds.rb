@@ -166,3 +166,144 @@ Movie.create!([
     image_file_name: "wonder-woman.png"
   }
 ])
+
+Review.create!([
+  {
+    name: 'John Doe',
+    stars: rand(1..5),
+    comment: 'A thrilling experience from start to finish!',
+    movie_id: 12
+  },
+  {
+    name: 'Jane Smith',
+    stars: rand(1..5),
+    comment: 'An absolute masterpiece of modern cinema.',
+    movie_id: 12
+  },
+  {
+    name: 'Alex Johnson',
+    stars: rand(1..5),
+    comment: 'Good movie, but the ending was a bit predictable.',
+    movie_id: 3
+  },
+  {
+    name: 'Emily Davis',
+    stars: rand(1..5),
+    comment: 'Fantastic visuals and great action sequences.',
+    movie_id: 3
+  },
+  {
+    name: 'Michael Brown',
+    stars: rand(1..5),
+    comment: 'The plot was interesting but lacked depth.',
+    movie_id: 4
+  },
+  {
+    name: 'Sarah Wilson',
+    stars: rand(1..5),
+    comment: 'Incredible performances by the cast. Highly recommend!',
+    movie_id: 4
+  },
+  {
+    name: 'David Lee',
+    stars: rand(1..5),
+    comment: 'Not as engaging as I hoped, but still worth watching.',
+    movie_id: 5
+  },
+  {
+    name: 'Jessica Taylor',
+    stars: rand(1..5),
+    comment: 'A great film with a lot of heart and excitement.',
+    movie_id: 5
+  },
+  {
+    name: 'Daniel Martinez',
+    stars: rand(1..5),
+    comment: 'The special effects were top-notch, but the story fell flat.',
+    movie_id: 7
+  },
+  {
+    name: 'Laura Anderson',
+    stars: rand(1..5),
+    comment: 'A fantastic addition to the genre, filled with twists and turns.',
+    movie_id: 7
+  },
+  {
+    name: 'James Wilson',
+    stars: rand(1..5),
+    comment: 'An enjoyable movie, though it had some pacing issues.',
+    movie_id: 12
+  },
+  {
+    name: 'Natalie Roberts',
+    stars: rand(1..5),
+    comment: 'A visual spectacle that doesn’t disappoint.',
+    movie_id: 1
+  },
+  {
+    name: 'Christopher Clark',
+    stars: rand(1..5),
+    comment: 'The character development was lacking, but the action was solid.',
+    movie_id: 1
+  },
+  {
+    name: 'Olivia Lewis',
+    stars: rand(1..5),
+    comment: 'A wonderful movie experience that I would watch again.',
+    movie_id: 5
+  },
+  {
+    name: 'Ryan Walker',
+    stars: rand(1..5),
+    comment: 'Entertaining, though some parts felt rushed.',
+    movie_id: 5
+  },
+  {
+    name: 'Sophia Hall',
+    stars: rand(1..5),
+    comment: 'An engaging story with a compelling lead performance.',
+    movie_id: 6
+  },
+  {
+    name: 'Matthew Young',
+    stars: rand(1..5),
+    comment: 'Enjoyable film with some standout moments.',
+    movie_id: 6
+  },
+  {
+    name: 'Ava King',
+    stars: rand(1..5),
+    comment: 'A solid entry in the genre with a memorable soundtrack.',
+    movie_id: 8
+  },
+  {
+    name: 'Ethan Wright',
+    stars: rand(1..5),
+    comment: 'The film was good but had some predictable elements.',
+    movie_id: 8
+  },
+  {
+    name: 'Mia Scott',
+    stars: rand(1..5),
+    comment: 'A well-crafted film with great action sequences.',
+    movie_id: 9
+  },
+  {
+    name: 'Noah Adams',
+    stars: rand(1..5),
+    comment: 'Visually stunning but lacked a strong storyline.',
+    movie_id: 9
+  },
+  {
+    name: 'Isabella Carter',
+    stars: rand(1..5),
+    comment: 'An enjoyable film with a few memorable scenes.',
+    movie_id: 9
+  },
+  {
+    name: 'Liam Green',
+    stars: rand(1..5),
+    comment: 'A great movie that’s fun from start to finish.',
+    movie_id: 10
+  }
+])
