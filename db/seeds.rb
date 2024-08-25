@@ -169,7 +169,7 @@ Movie.create!([
 
 Review.create!([
   {
-    name: 'John Doe',
+    name: 'Peyton Owens',
     stars: rand(1..5),
     comment: 'A thrilling experience from start to finish!',
     movie_id: 12
