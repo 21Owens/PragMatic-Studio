@@ -1,0 +1,18 @@
+<h1>
+   Showing Review for <%= link_to @movie.title, movie_path(@movie)%>
+</h1>
+
+<%= render "shared/errors", object: @review %>
+
+<%= form_with(model: [@movie, @review]) do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true %>
+
+    <%= f.label :stars %>
+    <%= f.radio :stars, Review::STARS, prompt: "Pick One" %>
+
+    <%= f.label :comment %>
+    <%= f.text_area :comment, placeholder: "What did you think? "%>
+
+    <%= f.submit "Post Review" %>
+<% end %>
