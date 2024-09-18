@@ -313,3 +313,11 @@ Review.create!([
   movie_id: 10
 }
 ])
+
+# u = user.new
+#   name: "Leia"
+#   email: "leiafreeman1414@gmail.com"
+#   password: "leiaFreeman14!")
+#   t.datetime "created_at", null: false
+#   t.datetime "updated_at", null: false
+# ])
