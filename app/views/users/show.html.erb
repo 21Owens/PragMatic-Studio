@@ -5,4 +5,12 @@
 <p>
   <%= @user.created_at.strftime("%B %Y") %>
 </p>
+
+<div class="actions">
+  <%= link_to "Edit Account", edit_user_path(@user),
+                              class: "button edit" %>
+
+  <%= link_to "Delete Account", @user, class: "button delete",
+                                data: { turbo_method: :delete, turbo_confirm: "Permanently Delete Account? " }%>
+</div>
 </section>
