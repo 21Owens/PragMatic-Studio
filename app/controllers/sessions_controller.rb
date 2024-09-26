@@ -15,6 +15,9 @@ def create
 end
 
 def destroy
+ session[:user_id] = nil
+ redirect_to movies_path, status: :see_other,
+ notice: "You have been signed out!"
 end
 
 
