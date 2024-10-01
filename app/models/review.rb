@@ -1,8 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :movie
-
-
-  validates :name, presence: true
+  belongs_to :user
 
   validates :comment, length: { minimum: 4 }
 
