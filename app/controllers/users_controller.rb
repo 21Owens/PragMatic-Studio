@@ -47,7 +47,7 @@ def destroy
     @user = User.find_by(params[:id])
     @user.destroy
     redirect_to movies_url, status: :see_other,
-        alert: "Account Successfully Deleted"
+        alert: "Account Successfully Deleted!"
 
 end
 
