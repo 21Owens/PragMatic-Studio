@@ -6,7 +6,7 @@
        <%= pluralize(review.stars, 'star') %>
       <%= render "shared/stars", percent: @movie.average_stars_as_percent %>
       <p>
-        <%= review.name %>
+        <%= link_to review.user.name, review.user  %>
         <span class="date">
           <%= time_ago_in_words(review.created_at) %> ago
         </span>

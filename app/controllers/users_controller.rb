@@ -2,7 +2,6 @@ class UsersController < ApplicationController
 
 before_action :require_signin, except: [:create, :new]
 before_action :require_correct_user, only: [:edit, :update]
-before_action :require_admin, only: [:destroy]
 
 
 
@@ -12,6 +11,7 @@ end
 
 def show
     @user = User.find(params[:id])
+    @reviews = @user.reviews
 end
 
 def new
@@ -47,7 +47,7 @@ def destroy
     @user = User.find_by(params[:id])
     @user.destroy
     redirect_to movies_url, status: :see_other,
-    alert: "Account Successfully Deleted"
+        alert: "Account Successfully Deleted"
 
 end
 
