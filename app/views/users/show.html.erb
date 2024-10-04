@@ -4,13 +4,13 @@
 
   <% if current_user?(@user) %>
     <div class="actions">
+      <%= profile_image(@user) %>
       <%= link_to "Edit Account", edit_user_path(@user),
                   class: "button edit" %>
       <%= link_to 'Delete Account', @user, class: "button delete",
           data: { turbo_method: :delete, turbo_confirm: "Permanently delete your account!?" } %>
     </div>
   <% end %>
-
   <% if @reviews.present? %>
     <h3>Reviews</h3>
     <% @reviews.each do |review| %>
