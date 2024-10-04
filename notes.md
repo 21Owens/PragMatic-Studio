@@ -1,0 +1,1 @@
+Per rails conventions, A join model has two foreign keys. 
