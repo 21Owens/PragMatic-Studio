@@ -36,7 +36,7 @@ end
 def update
     if @user.update(user_params)
         redirect_to user_path(@user),
-        notice: "User Successfully Updated"
+        notice: "User Successfully Updated!"
     else
         render :edit, status: :unprocessable_entity
 
