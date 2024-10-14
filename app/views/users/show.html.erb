@@ -23,11 +23,21 @@
           <span class="date">
             <%= time_ago_in_words(review.created_at) %> ago
           </span>
+      <% if @favorite_movies.present? %>
+  
+      
           <p>
             <%= review.comment %>
           </p>
         </div>
       </div>
+      <h3>Favorite Movies</h3>
+  <div class="favorite-movies">
+    <% @favorite_movies.each do |movie| %>
+      <%= link_to image_tag(movie.image_file_name), movie %>
+    <% end %>
+  </div>
+<% end %>
     <% end %>
   <% end %>
 </section>

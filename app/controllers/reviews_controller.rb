@@ -10,7 +10,6 @@ end
 
 def new
   @review = @movie.reviews.new
-
 end
 
 def create

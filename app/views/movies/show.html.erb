@@ -11,6 +11,18 @@
         <%= render "shared/stars", percent: @movie.average_stars_as_percent %>
         <%= link_to pluralize(@movie.reviews.size, "review"), movie_reviews_path(@movie)%>
     </div>
+    <aside>
+      <% if @fans.present? %>
+      <h4>Fans</h4>
+       <ul>
+        <%= @fans.each do |user| %>
+         <li> 
+          <%= link_to user.name, user %>
+         </li>
+        <% end %>
+       </ul> 
+      <% end %>
+    </aside>
     <p>
       <%= @movie.description %>
     </p>
