@@ -2,7 +2,7 @@
   <h1><%= @user.name %></h1>
   <h2><%= mail_to(@user.email) %></h2>
 
-  <% if current_user?(@user) %>
+  <% if current_user?(@user) || current_user_admin? %>
     <div class="actions">
       <%= profile_image(@user) %>
       <%= link_to "Edit Account", edit_user_path(@user),
@@ -24,8 +24,8 @@
             <%= time_ago_in_words(review.created_at) %> ago
           </span>
       <% if @favorite_movies.present? %>
-  
-      
+
+
           <p>
             <%= review.comment %>
           </p>
