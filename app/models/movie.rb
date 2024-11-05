@@ -35,5 +35,8 @@ class Movie < ApplicationRecord
     (self.average_stars / 5.0) * 100
   end
 
+  def flop?
+   total_gross.blank? || total_gross < 225_000_000
+  end
 
 end
