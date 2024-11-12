@@ -6,7 +6,9 @@ class Movie < ApplicationRecord
   has_many :characterizations, dependent: :destroy
   has_many :genres, through: :characterizations
 
-  validates :title, :released_on, :duration, presence: true
+  before_save :set_slug
+
+  validates :title, :released_on, :duration, presence: true, uniqueness: true
 
   validates :description, length: { minimum: 25 }
 
@@ -38,5 +40,19 @@ class Movie < ApplicationRecord
   def flop?
    total_gross.blank? || total_gross < 225_000_000
   end
+
+  def to_param
+    slug
+  end
+
+  def set_slug
+    self.slug = title.parameterize
+  end
+
+
+
+
+
+
 
 end
