@@ -8,7 +8,7 @@ class Movie < ApplicationRecord
 
   before_save :set_slug
 
-  validates :title, :released_on, :duration, presence: true, uniqueness: true
+  validates :title, :released_on, :duration, presence: true
 
   validates :description, length: { minimum: 25 }
 
