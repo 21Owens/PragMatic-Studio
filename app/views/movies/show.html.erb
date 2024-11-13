@@ -12,7 +12,7 @@
   <% if @genres.present? %>
     <h4>Genres</h4>
     <ul>
-     <%= @genres.each do |genre|%>
+     <% @genres.each do |genre|%>
        <li>
         <%= genre.name %>
        </li>
@@ -33,12 +33,12 @@
       <% if @fans.present? %>
       <h4>Fans</h4>
        <ul>
-        <%= @fans.each do |user| %>
+        <% @fans.each do |fan| %>
          <li>
-          <%= link_to user.name, user %>
+          <%= link_to fan.name, fan %>
          </li>
          <li>
-          <%= profile_image(user) %>
+          <%= profile_image(fan) %>
          </li>
         <% end %>
        </ul>
