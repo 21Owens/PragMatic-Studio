@@ -6,10 +6,10 @@
         <%= link_to "All Movies", movies_path %>
       </li>
       <li>
-        <%= link_to "Hits!", filtered_movies_path(:hits)%>
+        <%= link_to "Hits", filtered_movies_path(:hits)%>
       </li>
       <li>
-        <%= link_to "Flops!", filtered_movies_path(:flops)%>
+        <%= link_to "Flops", filtered_movies_path(:flops)%>
       </li>
       <li>
         <%= link_to "Upcoming", filtered_movies_path(:upcoming), class: "active" %>
@@ -30,10 +30,10 @@
         </li>
       <% else %>
         <li>
-          <%= link_to "Sign In!", new_session_path, class: "button" %>
+          <%= link_to "Sign In", new_session_path, class: "button" %>
         </li>
         <li>
-          <%= link_to "Sign Up!", signup_path, class: "button" %>
+          <%= link_to "Sign Up", signup_path, class: "button" %>
         </li>
       <% end %>
     </ul>

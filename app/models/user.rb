@@ -24,6 +24,7 @@ def gravatar_id
 end
 
 
+
 def downcase_username
   self.user_name = username.downcase
 end
