@@ -2,14 +2,15 @@ class ReviewsController < ApplicationController
 
   before_action :require_signin
   before_action :set_movie
+  before_action :check_user_restriction, only: [:new, :create]
 
 def index
   @reviews = @movie.reviews
-
 end
 
+
 def new
-  @review = @movie.reviews.new
+    @review = @movie.reviews.new
 end
 
 def create
@@ -28,6 +29,13 @@ end
   private
     def review_params
       params.require(:review).permit(:stars, :comment)
+    end
+
+
+    def check_user_restriction
+      if current_user.user_restricted?
+        redirect_to movie_reviews_path(@movie), alert: "You are currently restricted."
+      end
     end
 
 
