@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :update, :edit, :destroy]
 
   def index
+    render json:
     case params[:filter]
     when "upcoming"
       @movies = Movie.upcoming
@@ -20,6 +21,7 @@ class MoviesController < ApplicationController
   end
 
   def show
+    render json:
     @genres = @movie.genres.order(:name)
     @fans = @movie.fans
 
